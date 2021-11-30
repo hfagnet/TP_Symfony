@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ShowController!{% endblock %}
+
+{% block body %}
+<h1 style="display: flex; justify-content:center;">
+{{article.title}}
+</h1>
+<br/>
+<div style="display: flex; justify-content: center; align-items:center;">
+    {{article.author}}
+    <p style="margin: 20px;"> --------- </p>
+    {{article.datetime|date('d/m/Y')}}
+</div>
+<hr/>
+<p>{{article.content}}</p>
+
+<a href="{{ path('article.index') }}"><button>Retour à la liste des articles</button></a>
+{% endblock %}
