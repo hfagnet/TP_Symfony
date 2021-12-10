@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ShowController!{% endblock %}
+
+{% block body %}
+<h1 style="display: flex; justify-content:center;">
+{{category.name}}
+</h1>
+<hr/>
+<p>{{category.description}}</p>
+
+<a href="{{ path('category.index') }}"><button>Retour à la liste des categories</button></a>
+{% endblock %}

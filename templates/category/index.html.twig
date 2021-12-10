@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+<table>
+<thead>
+    <th>name</th><th>description</th>
+</thead>
+<tbody>
+    {% for c in categories %}
+    <tr>
+        <td>{{c.name}}</td>
+        <td><a href="{{ path('category.show', {name : c.name}) }}">{{c.name}}</a></td>
+        <td>{{c.description|slice(0,300) ~ '...'}}<a href="{{ path('category.show', {name : c.name}) }}">voir plus</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
+
